@@ -297,36 +297,54 @@
             <p class="mb-5">Perimítanos ayudarle a hacer crecer su patrimonio, o ayudarle a encontrar el inmueble que está buscando. En breve un ejecutivo lo atenderá.</p>
           </div>
           <div class="col-lg-6 padding-container d-inline">
-            <form class="form-horizontal" action="sendmail.php" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden"/>
-
-              <input type="hidden" name="lang" id="lang" value="es" />
-              <input type="hidden" name="contact_request[organization_id]" id="contact_request_organization_id" />
-              <input value="" type="hidden" name="contact_request[form_code]" id="contact_request_form_code" />
-              <div class="form-group">
-                <label class="control-label col-sm-6" for="contact_request_contact_request_name">Nombre completo</label>      <div class="col-sm-12">
-                  <input class="form-control" type="text" name="first_name" required />
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="control-label col-sm-6" for="contact_request_contact_request_email">Email</label>      <div class="col-sm-12">
-                  <input class="form-control" type="text" name="email" id="contact_request_email" required />
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="control-label col-sm-6" for="contact_request_contact_request_phone_number">Número de teléfono</label>      <div class="col-sm-12">
-                  <input size="30" maxlength="30" class="form-control" type="text" name="phone" id="contact_request_phone_number" />
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="control-label col-sm-6" for="contact_request_contact_request_message">Mensaje</label>      <div class="col-sm-12">
-                  <textarea cols="45" rows="7" class="form-control" name="message" id="contact_request_message">
-          </textarea>      </div>
-              </div>
-              <div class="form-group">
-                <div class="col-sm-12 col-sm-offset-4">
-                  <input type="submit" name="submit" value="Enviar" id="submit_button" data-submit-withtext="Enviando..." class="btn btn-primary submit btn-lg" autocomplete="off" />
-                </div>
-              </div>
+            <form name="contactform" method="post" action="send_form_email.php">
+<table width="450px">
+<tr>
+ <td valign="top">
+  <label for="first_name">Nombre*</label>
+ </td>
+ <td valign="top">
+  <input  type="text" name="first_name" maxlength="50" size="30">
+ </td>
+</tr>
+<tr>
+ <td valign="top"">
+  <label for="last_name">Apellido*</label>
+ </td>
+ <td valign="top">
+  <input  type="text" name="last_name" maxlength="50" size="30">
+ </td>
+</tr>
+<tr>
+ <td valign="top">
+  <label for="email">Email*</label>
+ </td>
+ <td valign="top">
+  <input  type="text" name="email" maxlength="80" size="30">
+ </td>
+</tr>
+<tr>
+ <td valign="top">
+  <label for="telephone">Número Telefónico</label>
+ </td>
+ <td valign="top">
+  <input  type="text" name="telephone" maxlength="30" size="30">
+ </td>
+</tr>
+<tr>
+ <td valign="top">
+  <label for="comments">Comentarios *</label>
+ </td>
+ <td valign="top">
+  <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+ </td>
+</tr>
+<tr>
+ <td colspan="2" style="text-align:center">
+  <input type="submit" value="Enviar">
+ </td>
+</tr>
+</table>
 </form>
             </div>
       </div>
